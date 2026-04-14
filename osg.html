@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSG Security System</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; scroll-behavior: smooth;}
+    header {background: linear-gradient(90deg,#0a1f44,#1c3d7a); color: white; padding: 20px; display: flex; align-items: center; justify-content: flex-start; gap: 15px;}
+    .logo {width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid white;}
+    nav {background: #1c3d7a; padding: 10px; text-align: center; position: sticky; top: 0;}
+    nav a {color: white; margin: 10px; text-decoration: none; font-weight: bold;}
+    section {padding: 40px 20px;}
+    .services, .gallery {display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 20px;}
+    .card {background: #f4f4f4; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
+    .gallery img {width: 100%; border-radius: 10px;}
+    footer {background: #0a1f44; color: white; text-align: center; padding: 10px;}
+    .btn {background: #ff9800; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;}
+    .whatsapp {position: fixed; bottom: 20px; right: 20px; background: green; color: white; padding: 15px; border-radius: 50%; text-decoration: none;}
+    .call {position: fixed; bottom: 80px; right: 20px; background: #2196f3; color: white; padding: 15px; border-radius: 50%; text-decoration: none;}
+  </style>
+</head>
+<body>
+<div id="loader" style="position:fixed; width:100%; height:100%; background:#0a1f44; color:#fff; display:flex; justify-content:center; align-items:center; z-index:9999;">
+  <h2>Loading OSG Security...</h2>
+</div>
+
+<header>
+  <img src="logo.png" alt="OSG Logo" class="logo">
+  <div>
+    <h1>OSG Security System</h1>
+    <p>Your Safety, Our Priority</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#demo">Live Demo</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+  <div style="max-width:500px;">
+    <h2>Welcome to OSG Security System</h2>
+    <p>Complete security solutions for Home, Office & Shops.</p>
+    <a class="btn" href="#contact">Get Service</a>
+  </div>
+  <div>
+    <div style="position:relative; width:300px;">
+    <img id="slider" src="security1.jpg" alt="Security" style="width:100%; border-radius:10px; transition: opacity 0.5s;">
+    <button onclick="prevImage()" style="position:absolute; left:5px; top:45%;">◀</button>
+    <button onclick="nextImage()" style="position:absolute; right:5px; top:45%;">▶</button>
+  </div>
+  </div>
+</section>
+
+<section id="testimonial">
+  <h2>Customer Reviews</h2>
+  <div class="services">
+    <div class="card">"Best CCTV service, very professional!" ⭐⭐⭐⭐⭐</div>
+    <div class="card">"Fast installation and good support." ⭐⭐⭐⭐</div>
+    <div class="card">"Affordable and reliable security system." ⭐⭐⭐⭐⭐</div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We provide CCTV installation, alarm systems, access control and live monitoring with best quality service.</p>
+</section>
+
+<section id="services" class="services">
+  <div class="card">📷 CCTV Installation</div>
+  <div class="card">🚨 Alarm System</div>
+  <div class="card">🔐 Access Control</div>
+  <div class="card">🖥️ Live Monitoring</div>
+</section>
+
+<section id="gallery">
+  <h2>Our Work</h2>
+  <div class="gallery">
+  <img src="camera41.jpg">
+  <img src="camera42.jpg">
+  <img src="camera43.jpg">
+  </div>
+</section>
+
+<section id="demo">
+  <h2>Live Demo</h2>
+  <p>Follow our Facebook Page for Live Updates:</p>
+  <iframe 
+    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+    width="100%" 
+    height="400" 
+    style="border:none;overflow:hidden" 
+    scrolling="no" 
+    frameborder="0" 
+    allowfullscreen="true">
+  </iframe>
+</section>
+
+<section id="whatsapp">
+  <h2>Our WhatsApp Channel</h2>
+  <p>Join our WhatsApp channel for live updates:</p>
+  <div class="card">
+    <h3>OSG Security System</h3>
+    <p>Get CCTV updates, offers & security tips</p>
+    <a class="btn" href="https://whatsapp.com/channel/YOUR_CHANNEL_LINK" target="_blank">Join Now</a>
+  </div>
+</section>
+
+<section id="callback">
+  <h2>Request a Call Back</h2>
+  <p>Fill your details, we will call you shortly:</p>
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required style="padding:10px;width:100%;margin:5px 0;">
+    <input type="tel" id="phone" placeholder="Your Phone Number" required style="padding:10px;width:100%;margin:5px 0;">
+    <button type="submit" class="btn">Request Call</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: 8809411823</p>
+  <p>Email: osg63218@gmail.com</p>
+  <iframe src="https://maps.google.com/maps?q=osgsecuritysystem=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0;"></iframe>
+</section>
+
+<footer>
+  <p>© 2026 OSG Security System</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918809411823?text=Hello%20OSG%20Security%20System" target="_blank">💬</a>
+
+<a class="call" href="tel:8809411823">📞</a>
+
+<script>
+function sendToWhatsApp(){
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+
+  // Save to localStorage (basic database)
+  var data = {name:name, phone:phone, date:new Date().toLocaleString()};
+  var allData = JSON.parse(localStorage.getItem('leads')) || [];
+  allData.push(data);
+  localStorage.setItem('leads', JSON.stringify(allData));
+
+  // Send Email using mailto
+  var subject = "New Call Request";
+  var body = "Name: " + name + "%0APhone: " + phone;
+  window.location.href = "mailto:info@osgsecurity.com?subject=" + subject + "&body=" + body;
+
+  alert("Request saved & email opened!");
+}
+</script>
+
+<script>
+// Image Slider
+var images = ["security1.jpg","security2.jpg","security3.jpg"];
+var i = 0;
+
+function showImage(){
+  document.getElementById("slider").style.opacity = 0;
+  setTimeout(function(){
+    document.getElementById("slider").src = images[i];
+    document.getElementById("slider").style.opacity = 1;
+  },300);
+}
+
+function nextImage(){
+  i = (i + 1) % images.length;
+  showImage();
+}
+
+function prevImage(){
+  i = (i - 1 + images.length) % images.length;
+  showImage();
+}
+
+setInterval(nextImage, 3000);
+</script>
+
+<div id="popup" style="position:fixed; bottom:20px; left:20px; background:#fff; padding:15px; box-shadow:0 0 10px rgba(0,0,0,0.3); border-radius:10px; display:none;">
+  <p>🔥 Special Offer: Get CCTV Installation Today!</p>
+  <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+</div>
+
+<script>
+setTimeout(function(){
+  document.getElementById('popup').style.display='block';
+}, 4000);
+</script>
+
+<script>
+// Loader
+window.onload = function(){
+  document.getElementById('loader').style.display='none';
+}
+</script>
+
+<!-- Simple Chatbot -->
+<div id="chatbot" style="position:fixed; bottom:20px; left:20px; width:250px; background:#fff; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.3); overflow:hidden;">
+  <div style="background:#1c3d7a; color:#fff; padding:10px;">Chat Support</div>
+  <div id="chatbox" style="height:150px; padding:10px; overflow-y:auto; font-size:14px;">
+    <p><b>Bot:</b> Hello! How can we help you?</p>
+  </div>
+  <input id="userInput" type="text" placeholder="Type message..." style="width:70%; padding:5px; border:none;">
+  <button onclick="sendMessage()" style="width:28%;">Send</button>
+</div>
+
+<script>
+function sendMessage(){
+  var input = document.getElementById('userInput');
+  var msg = input.value;
+  if(msg.trim() === '') return;
+  var chatbox = document.getElementById('chatbox');
+  chatbox.innerHTML += '<p><b>You:</b> '+msg+'</p>';
+  chatbox.innerHTML += '<p><b>Bot:</b> Please call us at 8809411823</p>';
+  input.value='';
+  chatbox.scrollTop = chatbox.scrollHeight;
+}
+</script>
+
+</body>
+</html>
